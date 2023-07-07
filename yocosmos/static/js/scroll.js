@@ -31,42 +31,11 @@ function loadItems() {
                 // Clone the HTML template
                 let template_clone = template.content.cloneNode(true);
 
-                // Split date and time
-                //let tempArray = data.posts[i][2].split(" ");
-                //template_clone.querySelector("#post_date").innerHTML = tempArray[0];
-                //template_clone.querySelector("#post_time").innerHTML = tempArray[1];
-
-                filenameArray = ['static/profile_pics/0.png',
-                    'static/profile_pics/1.png',
-                    'static/profile_pics/2.png',
-                    'static/profile_pics/3.png',
-                    'static/profile_pics/4.png',
-                    'static/profile_pics/5.png',
-                    'static/profile_pics/6.png',
-                    'static/profile_pics/7.png',
-                    'static/profile_pics/8.png',
-                    'static/profile_pics/9.png',
-                    'static/profile_pics/10.png',
-                    'static/profile_pics/11.png',
-                    'static/profile_pics/12.png',
-                    'static/profile_pics/13.png',
-                    'static/profile_pics/14.png',
-                    'static/profile_pics/15.png',
-                    'static/profile_pics/16.png',
-                    'static/profile_pics/17.png',
-                    'static/profile_pics/18.png',
-                    'static/profile_pics/19.png',
-                    'static/profile_pics/20.png'];
-
                 // Unpack data from response, including posts and like counts (ip-based)
                 postdata = JSON.parse(data.posts[i]);
                 likedata = JSON.parse(data.likes[i]);
 
                 let tempDateArray = postdata.date_posted.split(" ")
-                // Old random image option
-                //const randomElement = filenameArray[Math.floor(Math.random() * filenameArray.length)];
-                const planetIndex = postdata.id % filenameArray.length;
-                const planetImage = filenameArray[planetIndex];
 
 
                 // Query & update the template content
@@ -74,7 +43,7 @@ function loadItems() {
                 template_clone.querySelector("#post_time").innerHTML = tempDateArray[1];
                 template_clone.querySelector("#post_id").innerHTML = `<a href="/post/${postdata.id}">#${postdata.id}</a>`;
                 template_clone.querySelector("#post_content").innerHTML = escapeHtml(postdata.content);
-                template_clone.querySelector("#post_img").src = planetImage;
+                template_clone.querySelector("#post_img").src = "/static/avatars/" + postdata.avatar_image;
                 // this one is stored to modify for likes 
                 let post_likecount = template_clone.querySelector("#post_likecount");
                 let post_id = postdata.id;

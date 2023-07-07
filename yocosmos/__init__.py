@@ -10,12 +10,17 @@ from flask_limiter.util import get_remote_address
 # so one extension object can be used for multiple apps
 # they are instead
 
+#db = SQLAlchemy()
+#mail = Mail()
+#limiter = Limiter(key_func=get_remote_address,
+#                  storage_uri="memcached://localhost:11211",
+#                  storage_options={})
+
 db = SQLAlchemy()
 mail = Mail()
 limiter = Limiter(key_func=get_remote_address,
-                  storage_uri="memcached://localhost:11211",
+                  storage_uri="memory://",
                   storage_options={})
-
 
 
 def create_app(config_class=Config):

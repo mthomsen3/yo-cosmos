@@ -6,13 +6,14 @@ from sqlalchemy_serializer import SerializerMixin
 class Post(db.Model, SerializerMixin):
     __tablename__ = 'post'
 
-    serialize_only = ('id', 'date_posted', 'content')
+    serialize_only = ('id', 'date_posted', 'content', 'avatar_image')
 
     id = db.Column(db.Integer, primary_key=True)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
     user_ip = db.Column(db.Text, nullable=False)
     likers = db.relationship("Liker", backref='post')
+    avatar_image = db.Column(db.String, nullable=True)
 
     def __repr__(self):
         return f"Post('{self.id}')"
