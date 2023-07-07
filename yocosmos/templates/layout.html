@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FYSV2R37Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5FYSV2R37Q');
+  </script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+  {% if title %}
+  <title>yocosmos.com - {{ title }}</title>
+  {% else %}
+  <title>YO COSMOS</title>
+  {% endif %}
+</head>
+
+
+
+<body class="has-darkmode darkmode">
+
+  <header class="header">
+    <div class="overlay has-fade"></div>
+    <nav class="flex flex-jc-sb flex-ai-c container">
+      <a href="/" class="header__logo has-darkmode darkmode">
+        <p>YO COSMOS</p>
+        <!-- <img src="images/logo.png" alt="Logo Image"> -->
+      </a>
+
+      <div class="header__links flex flex-jc-sb flex-ai-c has-darkmode darkmode">
+        <!-- <a class="" href="{{url_for('main.about')}}">About</a> -->
+        <button class="button flex flex-jc-c flex-ai-c has-darkmode darkmode" id="infoButton"
+          onclick="window.location.href=`{{url_for('main.about')}}`;">
+          <img id="info_icon" src="{{ url_for('static', filename='images/questionmark.svg')}}" alt="help">
+          <div class="hovershow">INFO</div>
+        </button>
+        <button class="button flex flex-jc-c flex-ai-c has-darkmode darkmode" id="modeButton">
+          <img id="sun_icon" src="{{ url_for('static', filename='images/sun.svg')}}" alt="mode">
+          <div class="hovershow">MODE</div>
+        </button>
+        <button class="button flex flex-jc-c flex-ai-c has-darkmode darkmode" id="starButton">
+          <img id="stars_icon" src="{{ url_for('static', filename='images/stars.svg')}}" alt="starfield">
+          <div class="hovershow">STARS</div>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main role="main" class="main">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+
+  <div class="footer">
+
+    <div class="footer__links has-darkmode darkmode">
+
+      <a href="{{url_for('main.privacy_policy')}}">Privacy Policy</a>
+      <a href="{{url_for('main.contact_get')}}">Contact</a>
+      <a href="{{url_for('main.terms_of_service')}}">Terms of Service</a>
+    </div>
+
+    <div class="footer__copyright has-darkmode darkmode">
+      &copy; CS27 All Rights Reserved.
+    </div>
+
+  </div>
+
+  <div id="cookiePopup" class="hide">
+    <img src="{{ url_for('static', filename='images/cookie.png')}}" />
+    <p>
+      This website uses minimal cookies to enhance the browsing experience. By continuing to use this website, you agree
+      to
+      their use (outlined <a href="{{url_for('main.privacy_policy')}}">here</a>).
+    </p>
+    <button id="acceptCookie">Accept</button>
+  </div>
+  <div id="cookiePopupOverlay" class="hide"></div>
+
+  </div>
+  <div class="secretmenu has-darkmode darkmode">
+    <a href="https://www.youtube.com/watch?v=fxqfGpxET38" target="_blank" rel="noopener noreferrer"><img id="yo"
+        src="{{ url_for('static', filename='images/video.svg')}}" alt="yo"></a>
+    <a href="https://ko-fi.com/coffeeswirl27" target="_blank" rel="noopener noreferrer"><img id="kofi"
+        src="{{ url_for('static', filename='images/mug.svg')}}" alt="kofi"></a>
+  </div>
+
+  <div class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/cookie.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/buttons.js')}}"></script>
+  <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <div class="flex flex-jc-c flex-ai-c">
+
+        <button class="button flex flex-jc-c flex-ai-c has-darkmode darkmode" id="postButton"
+            onclick="window.location.href=`{{url_for('posts.new_post_get')}}`;">POST</button>
+
+    </div>
+    <div id="scroller">
+        <template id="post_template">
+            <div id="content_section_area" class="content_section has-darkmode darkmode">
+                <div class="post flex">
+                    <div id="post_precontent_area" class="post__precontent flex flex-ai-c has-darkmode darkmode">
+                        <div class="">
+                            <img class="post__img" id="post_img"
+                                src="{{ url_for('static', filename='profile_pics/0.png')}}">
+                        </div>
+                        <div class="post__metadata">
+                            <p id="post_date"></p>
+                            <p id="post_time"></p>
+                            <p id="post_id"></p>
+                        </div>
+                    </div>
+                    <div id="post_content_area" class="post__content has-darkmode darkmode flex flex-ai-c">
+                        <p id="post_content"></p>
+                        <div class="likes flex flex-ai-c flex-jc-sb">
+                            <span id="post_likecount">0</span>
+                            <svg id="heart" class="like-button" title="heart-unfilled" width="21" height="21"
+                                viewBox="0 0 24 24" fill="none" stroke="#A9A9A9" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+    <!-- element to trigger the IntersectionObserver -->
+    <div class="flex flex-jc-c" id="sentinel">
+        <div class="loader has-darkmode darkmode">
+            <div class="spinner flex flex-jc-c flex-ai-c has-darkmode darkmode" aria-hidden="true"></div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/likes.js')}}"></script>
+<script src="{{ url_for('static', filename='js/scroll.js')}}"></script>
+
+
+
+{% endblock content %}

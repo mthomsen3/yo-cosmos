@@ -1,0 +1,11 @@
+docker run \
+  --name some-memcached \
+  -p 11211:11211 \
+  -d \
+  launcher.gcr.io/google/memcached1 \
+  '-m 256'
+
+
+
+
+  

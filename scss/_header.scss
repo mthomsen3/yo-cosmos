@@ -1,0 +1,166 @@
+.header {
+    right: 0;
+    left: 0;
+    top: 0;
+
+    nav {
+        position: relative;
+        padding-top: 1.0rem;
+        //padding-bottom: 1.0rem;
+        max-width: 1024px;
+        margin: auto;
+
+        @include breakpoint-down(small) {
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
+
+    }
+
+    &__logo {
+
+        text-decoration: none;
+
+
+        p {
+            font-family: 'Monoton', cursive;
+            font-size: 2rem;
+            padding: 0 1.5rem;
+            color: $blackboard;
+            transition: color 500ms ease-in-out, text-shadow 500ms ease-in-out;
+
+            &:hover {
+                color: rgb(255, 183, 49);
+                text-shadow: 0 0 2px white;
+            }
+        }
+
+        &.darkmode {
+            p {
+                color: $carbon;
+
+                &:hover {
+                    color: white;
+                    text-shadow: 0 0 3px rgb(255, 183, 49);
+                }
+            }
+        }
+    }
+
+
+    &__links {
+        padding: 0 1.5rem;
+
+        @include breakpoint-down(small) {
+            text-align: right;
+        }
+
+        a {
+            padding-right: 1rem;
+            text-decoration: none;
+            position: relative;
+            color: $carbon;
+            transition: color 500ms ease-in-out, text-shadow 500ms ease-in-out;
+
+
+            &:hover {
+                color: rgb(255, 183, 49);
+                text-shadow: 0 0 2px white;
+            }
+        }
+
+        &.darkmode {
+            a {
+                color: $blackboard;
+
+                &:hover {
+                    color: white;
+                    text-shadow: 0 0 3px rgb(255, 183, 49);
+                }
+            }
+        }
+    }
+
+}
+
+
+
+#modeButton,
+#starButton,
+#infoButton {
+    height: 3rem;
+    padding: 0rem 1rem;
+    position: relative;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+
+}
+
+#modeButton {
+    &:hover {
+        .hovershow {
+            opacity: 1;
+        }
+
+        #sun_icon {
+            opacity: 0;
+        }
+    }
+}
+
+#starButton {
+    &:hover {
+        .hovershow {
+            opacity: 1;
+        }
+
+        #stars_icon {
+            opacity: 0;
+        }
+    }
+}
+
+#infoButton {
+    &:hover {
+        .hovershow {
+            opacity: 1;
+        }
+
+        #info_icon {
+            opacity: 0;
+        }
+    }
+}
+
+#sun_icon,
+#stars_icon,
+#info_icon,
+.hovershow {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.hovershow {
+    font-size: 0.7rem;
+    position: absolute;
+    opacity: 0;
+}
+
+#modeButton,
+#starButton,
+#infoButton {
+
+    box-shadow: 0 0 4px $carbon;
+
+    &.darkmode {
+
+        box-shadow: 0 0 4px $screengray;
+    }
+}

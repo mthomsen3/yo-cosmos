@@ -1,0 +1,166 @@
+body {
+  //display: block;
+  margin: 0;
+  padding: 0;
+  //font-family: 'AndaleMono', monospace;
+  //font-family: 'Cutive Mono', monospace;
+  //font-family: 'Gill Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: $font-med;
+  font-weight: 300;
+  line-height: 1.3;
+  background: $screengray;
+  color: #333333;
+  min-height: 100vh;
+
+
+
+
+
+
+  &.darkmode {
+    background: #222222;
+    color: $carbon;
+  }
+
+
+
+
+}
+
+.main {
+  width: 599px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint-down(small) {
+    width: 78.25vw;
+  }
+}
+
+
+h1,
+h3 {
+  color: $blackboard;
+
+  &.darkmode {
+    color: $carbon;
+  }
+}
+
+
+.alert {
+  background-color: magenta;
+}
+
+
+
+
+
+
+
+
+
+
+
+// Spacing
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  &--pt {
+    padding-top: 1.5rem;
+  }
+
+  &--pb {
+    padding-bottom: 1.5rem;
+  }
+
+  &--py {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &--my {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &--pa {
+    padding: 1.5rem;
+  }
+
+  &--ma {
+    margin: 1.5rem;
+  }
+
+}
+
+.content {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100px;
+  bottom: 70px;
+  overflow: auto;
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-jc-r {
+    justify-content: flex-end;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+
+
+
+// Buttons
+button,
+.button {
+  // element and class "just in case"
+  padding: 0.875rem 2.1875rem;
+  background: #FFFFFF;
+  border: 0;
+  border-radius: 3rem;
+  cursor: pointer;
+  color: $blackboard;
+  font-weight: 700;
+  font-size: $font-norm;
+  font-family: 'Rubik', sans-serif;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    background: transparent;
+    //opacity: 0.8;
+    box-shadow: 0 0 9px $carbon;
+  }
+
+  &.darkmode {
+    background: $blackboard;
+    color: white;
+
+    &:hover {
+      color: white;
+      background: $blackboard-transparent;
+
+    }
+  }
+
+}
+
+

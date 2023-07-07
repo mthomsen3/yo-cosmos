@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="create-post has-darkmode darkmode">
+    <div class="create-post-form-wrapper flex-ai-c flex-jc-c has-darkmode darkmode">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="">
+                <legend class="">{{ legend }}</legend>
+                <div class="post-input">
+                    {{ form.content.label(class="has-darkmode darkmode") }}
+
+                    {% if form.content.errors %}
+                    {{ form.content(class="is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.content.errors%}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.content(class="has-darkmode darkmode") }}
+                    {% endif %}
+                </div>
+                <div class="accept-terms-area">
+                    <input type="checkbox" name="accept_terms" required />
+                    <label for="accept_terms" id="accept-terms">I have read and agree to the <a
+                            href="{{url_for('main.terms_of_service')}}">Terms of Service</a>. <br>I understand that I
+                        cannot edit my post in any way once it is submitted.</label>
+                </div>
+            </fieldset>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}

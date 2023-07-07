@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="content_section_area" class="content_section has-darkmode darkmode">
+    <div class="post flex">
+        <div id="post_precontent_area" class="post__precontent flex flex-ai-c has-darkmode darkmode">
+            <div class="">
+                <img class="post__img" id="post_img" src="{{ url_for('static', filename='profile_pics/0.png')}}">
+            </div>
+            <div class="post__metadata">
+                <p id="post_date">{{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+                <p id="post_time">{{ post.date_posted.strftime('%I:%M%p') }}</p>
+                <p id="post_id"><a href="{{ url_for('posts.post', post_id=post.id) }}">#{{ post.id }}</a></p>
+            </div>
+        </div>
+        <div id="post_content_area" class="post__content has-darkmode darkmode flex flex-ai-c">
+            <p id="post_content">{{ post.content }}</p>
+            <div class="likes flex flex-ai-c flex-jc-sb">
+                <span id="post_likecount">{{ likes }}</span>
+                <svg id="heart" class="like-button" title="heart-unfilled" width="21" height="21" viewBox="0 0 24 24"
+                    fill="none" stroke="#A9A9A9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/likes.js')}}"></script>
+<script src="{{ url_for('static', filename='js/post.js')}}"></script>
+
+
+{% endblock content %}
+

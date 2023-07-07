@@ -1,0 +1,56 @@
+.rule-subtext {
+    font-size: 0.85rem;
+}
+
+.about_section {
+
+    @include breakpoint-down(small) {
+        width: 70vw;
+        font-size: 1rem;
+    }
+
+    background-color: rgba(255, 255, 255, 0.07);
+    //padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 4px $carbon;
+
+    &.darkmode {
+        box-shadow: 0 0 4px $screengray;
+    }
+
+
+    a {
+        color: $coolorange;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    h1,
+    h3 {
+        padding-top: 1rem;
+    }
+
+    p {
+        &.darkmode {
+            color: $screengray;
+        }
+    }
+
+    ol {
+        //list-style: none;
+        &.darkmode {
+            color: $screengray;
+        }
+    }
+
+
+
+}

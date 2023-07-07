@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="about_section">
+    <h1 class="has-darkmode darkmode">About Page</h1>
+    <p class="has-darkmode darkmode">
+        Welcome to Yo Cosmos
+    </p>
+
+    <p class="has-darkmode darkmode">
+        Yo Cosmos is an alternative to traditional social media platforms.
+    </p>
+
+    <p class="has-darkmode darkmode">
+        On Yo Cosmos there are no accounts, no usernames, no profiles, and no images. Any user can yeet their thoughts
+        out into the cosmos as often as they choose (within reasonable rate limits).
+    </p>
+
+    <h3 class="has-darkmode darkmode">What is Yo Cosmos?</h3>
+    <p class="has-darkmode darkmode">
+        Have something to say, but no one to say it to? Want something to be known to the universe?
+    </p>
+
+    <p class="has-darkmode darkmode">
+        Yo Cosmos is the perfect place to hurl your thoughts, coherent or otherwise, into the
+        Cosmos. (Who knows, maybe you'll hear back...)
+    </p>
+
+
+
+
+
+    <h3 class="has-darkmode darkmode">Cosmos Code of Conduct</h3>
+    <p class="has-darkmode darkmode">
+        Yo Cosmos is a text-only message board.
+
+        We have rules of conduct that all users must obey at all times. By using this website, you agree to abide by the
+        rules and terms set forth on this page, in our <a href="{{url_for('main.terms_of_service')}}">Terms of
+            Service</a>, and in our <a href="{{url_for('main.privacy_policy')}}">Privacy Policy</a>.
+    </p>
+    <p>
+        We reserve the right to change or modify these rules at any time without prior notice or reason.
+    </p>
+    <h3 class="has-darkmode darkmode">Rules</h3>
+    <ol class="has-darkmode darkmode">
+        <li>Don't post excessively inappropriate content</li>
+        <p class="rule-subtext">Any posts containing content deemed excessively inappropriate by the site administrators
+            (including self
+            censored, automatically censored, acronyms and slang) will be removed from the forum at the discretion of
+            the administrators. Posts containing pornography or illegal content will be removed and the user's ip
+            adderss banned.</p>
+        <li>Be tolerant</li>
+        <p class="rule-subtext">Racial, sexual, or any other form of discrimination is not tolerated. Posts that contain
+            discriminatory
+            content will be removed at the discretion of the site administrators.</p>
+        <li>Don't doxx anyone (including yourself)</li>
+        <p class="rule-subtext">Don't post personally identifiable information (i.e. name, address, email, phone number,
+            etc.), without
+            explicit prior consent of all parties involved. Personally identifiable information that is posted with
+            clear malicious intent will be removed by the administrators.</p>
+        <li>Don't advertise</li>
+        <p class="rule-subtext">Do not use Yo Cosmos to generate traffic or attention for your endeavor, links to
+            personal websites and
+            projects are permitted within reason as determined by the site administrators. Commercial activities of any
+            kind are not permitted on Yo Cosmos. Any exception to these rules must be pre-authorised on a case by case
+            basis by an administrator.</p>
+        <li>Don't behave in a malicious manner</li>
+        <p class="rule-subtext">
+            Do not behave in a manner that can cause distress, harm or inconvenience to other members, staff or the site
+            itself. This includes, but is not limited to, discrimination, bullying, offensive material, and breaching
+            others privacy.
+        </p>
+        <li>Don't engage in illegal activity</li>
+        <p class="rule-subtext">Yocosmos.com is located in the United States, and as such, United States law must be
+            followed at all times.
+            This includes Copyright law and Computer Misuse law (Malware, Virus etc).</p>
+        <li>Reporting content</li>
+        <p class="rule-subtext">Please do not make posts to inform other users of site rules or attempt to enforce rules
+            without the
+            authorization of site administrators. Use the <a href="{{url_for('main.contact_get')}}">Contact</a> link at
+            the bottom of the page to inform
+            administrators when a post breaks the website rules or when administrator attention is needed.</p>
+        </ul>
+
+
+</div>
+{% endblock content %}

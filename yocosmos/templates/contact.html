@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="contact has-darkmode darkmode">
+    <div class="contact-form-wrapper flex-ai-c flex-jc-c has-darkmode darkmode">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <legend class="">{{ legend }}</legend>
+                <div class="form-item">
+                    {{ form.name(class="has-darkmode darkmode") }}
+                    {{ form.name.label(class="has-darkmode darkmode") }}
+                    {% if form.name.errors %}
+                    <div class="invalid-feedback">
+                        {% for error in form.name.errors%}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-item">
+                    {{ form.email(class="has-darkmode darkmode") }}
+                    {{ form.email.label(class="has-darkmode darkmode") }}
+                    {% if form.email.errors %}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors%}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-item">
+                    {{ form.content(class="has-darkmode darkmode") }}
+                    {{ form.content.label(class="has-darkmode darkmode") }}
+                    {% if form.content.errors %}
+                    <div class="invalid-feedback">
+                        {% for error in form.content.errors%}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </fieldset>
+
+            <br>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,77 @@
+.footer {
+
+
+
+    position: relative;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    font-size: $font-sm;
+    color: $carbon;
+
+    &__social {
+        padding-top: 0.5rem;
+    }
+
+    &__links {
+        padding-top: 0.5rem;
+
+        a {
+            color: $carbon; 
+            padding-left: 0.1rem;
+            padding-right: 0.1rem;
+        }
+
+        &.darkmode {
+            a {
+                color: $blackboard;
+            }
+        }
+
+    }
+
+    &__copyright {
+        padding-top: 0.5rem;
+        &.darkmode {
+            color: $blackboard;
+        }
+    }
+
+
+}
+
+.secretmenu {
+
+    #yo,
+    #kofi {
+        width: 1rem;
+        //margin: auto;
+        vertical-align: text-bottom;
+        padding-left: 0.1rem;
+    }
+
+    width: 100vw;
+    position: absolute;
+    margin-bottom: 0;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translate(-1.1rem);
+    transition: transform 300ms ease-in-out;
+
+    &:hover {
+        transform: translate(0rem);
+    }
+
+    a {
+        color: $carbon; 
+
+    }
+
+    &.darkmode {
+        a {
+            color: $blackboard;
+        }
+    }
+}
