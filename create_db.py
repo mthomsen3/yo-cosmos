@@ -101,13 +101,13 @@ db.session.add(post25)
 post26 = Post(content='Am I a cat person, or just a lazy dog person?', user_ip=temp_ip, date_posted = datetime(1995, 10, 13, 9, 10), avatar_image = random.choice(avatar_filenames))
 db.session.add(post26)
 
-post27 = Post(content='This isn\'t my dad, it\'s a website. Time to throw this bitch on the ground.', user_ip=temp_ip, date_posted = datetime(1995, 10, 23, 17, 10), avatar_image = random.choice(avatar_filenames))
+post27 = Post(content='This isn\'t my dad, it\'s a website. Time to throw this thing on the ground.', user_ip=temp_ip, date_posted = datetime(1995, 10, 23, 17, 10), avatar_image = random.choice(avatar_filenames))
 db.session.add(post27)
 
 post28 = Post(content='Jeff Bezos has 121 BILLION dollars. The population of earth is 7 billion people. He could give every person 1 BILLION dollars and end poverty, and he would still have 114 billion dollars left over but he would do it. This is what capitalist greed looks like!', user_ip=temp_ip, date_posted = datetime(1995, 10, 30, 2, 10), avatar_image = random.choice(avatar_filenames))
 db.session.add(post28)
 
-post29 = Post(content='Rolled my first joint today. So that\'s cool.', user_ip=temp_ip, date_posted = datetime(1995, 11, 2, 17, 40), avatar_image = random.choice(avatar_filenames))
+post29 = Post(content='Test Post. Do not move during the duration of the Test Post.', user_ip=temp_ip, date_posted = datetime(1995, 11, 2, 17, 40), avatar_image = random.choice(avatar_filenames))
 db.session.add(post29)
 
 post30 = Post(content='I wonder how much light pollution is caused by Christmas lights', user_ip=temp_ip, date_posted = datetime(1995, 11, 30, 19, 10), avatar_image = random.choice(avatar_filenames))
@@ -122,6 +122,61 @@ db.session.add(post32)
 post33 = Post(content='In Japan 🇯🇵 , heart surgeon ❤️👨‍⚕️ . Number one 😭☝️ . Steady hand😳✋️. One day, Yakuza boss 🙇🏻need 🆕 heart💘. I do operation🔪⚔️. But, mistake😱! Yakuza boss die😵😪! Yakuza very mad👿. I hide🙈 in fishing boat🐟🚣🏻‍♀️, come to America🎇🎊🇺🇸. No english🤐, no food😩, no money📉🚫💲. Darryl 👨🏿give me job🙌👨🏻‍💼. Now I have house🏡, American car 🚗 , and new woman 🆕👱🏻‍♀️. Darryl 👨🏿save life⛑. My big secret🙊: I kill ☠️yakuza boss on purpose😈. I good 👍surgeon. The best👌💯!', user_ip=temp_ip, date_posted = datetime(1995, 12, 27, 12, 10), avatar_image = random.choice(avatar_filenames))
 db.session.add(post33)
 
+post34 = Post(content='Yo Cosmos is live!', user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 0, 51, 11), avatar_image = random.choice(avatar_filenames))
+db.session.add(post34)
+
+post35 = Post(content='Why do British people pronounce the word "clerk" like "Clark"? And why does it bug me so much?', user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 0, 51, 59), avatar_image = random.choice(avatar_filenames))
+db.session.add(post35)
+
+post36 = Post(content='I finally have access to a family cookie recipe that was kept secret for decades! Now attempting to make the recipe ‘my own’ with a few changes…', user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 1, 13, 59), avatar_image = random.choice(avatar_filenames))
+db.session.add(post36)
+
+post37 = Post(content="We're nearly out of Hanukkah candles here, and it's not even half way through. Sort of appropriate though, wouldn't you say?", user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 1, 17, 18), avatar_image = random.choice(avatar_filenames))
+db.session.add(post37)
+
+post38 = Post(content='I can put my whole fist in my mouth.', user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 1, 50, 10), avatar_image = random.choice(avatar_filenames))
+db.session.add(post38)
+
+post39 = Post(content='YO cosmos', user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 1, 53, 40), avatar_image = random.choice(avatar_filenames))
+db.session.add(post39)
+
+post40 = Post(content="When it's 1 AM and you tell someone you're going to bed and they respond “why so early?”… it may be a sign you have a problem", user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 6, 49, 32), avatar_image = random.choice(avatar_filenames))
+db.session.add(post40)
+
+post41 = Post(content='I never really pondered the name “dry ice” before today. It doesn’t melt, so it’s not wet. Dry ice. Only took me a couple decades to make that connection.', user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 8, 33, 15), avatar_image = random.choice(avatar_filenames))
+db.session.add(post41)
+
+post42 = Post(content='I wonder how many of my “first time revelations” are really just “things I definitely once knew but completely forgot about”', user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 17, 23, 17), avatar_image = random.choice(avatar_filenames))
+db.session.add(post42)
+
+post43 = Post(content='TIL of the term “first amendment auditors”', user_ip=temp_ip, date_posted = datetime(2022, 12, 22, 18, 49, 6), avatar_image = random.choice(avatar_filenames))
+db.session.add(post43)
+
+post44 = Post(content="There's no such thing as a non sexual banana", user_ip=temp_ip, date_posted = datetime(2022, 12, 23, 4, 59, 4), avatar_image = random.choice(avatar_filenames))
+db.session.add(post44)
+
+post45 = Post(content='If you took a vacuum sealed dry aged steak and stored it in a laboratory-grade freezer at -80C, would it still taste good in 30 years? We could have results as soon as 2052…', user_ip=temp_ip, date_posted = datetime(2022, 12, 25, 20, 24, 20), avatar_image = random.choice(avatar_filenames))
+db.session.add(post45)
+
+post46 = Post(content='There was a time in my life when I could identify types of cloud by name. That time is gone, the information lost. It was a short time.', user_ip=temp_ip, date_posted = datetime(2022, 12, 26, 0, 54, 34), avatar_image = random.choice(avatar_filenames))
+db.session.add(post46)
+
+post47 = Post(content='In a sufficiently advanced structure that is capable of rapid molecular rearrangement, one could imagine a ‘turbolift’-style system wherein the building creates a human-sized open cavity facing into the departure room, which closes around the occupant once entered and shifts them in 3D space to whatever destination room is ready to accept them. This would obfuscate the need for elevator banks. Claustrophobics would be advised to take the stairs…', user_ip=temp_ip, date_posted = datetime(2022, 12, 26, 3, 56, 32), avatar_image = random.choice(avatar_filenames))
+db.session.add(post47)
+
+post48 = Post(content='Today I came to a mental truce with the number 6. Finally! Merry Christmas!', user_ip=temp_ip, date_posted = datetime(2022, 12, 26, 4, 1, 27), avatar_image = random.choice(avatar_filenames))
+db.session.add(post48)
+
+post49 = Post(content='Made a breakfast sandwich with an English muffin, homemade sausage patty, homemade Big Mac sauce, shrettuce, and American cheese. 10/10.', user_ip=temp_ip, date_posted = datetime(2022, 12, 27, 13, 25, 17), avatar_image = random.choice(avatar_filenames))
+db.session.add(post49)
+
+post50 = Post(content="I think I'm slowly replacing all the knowledge I stored in graduate school with The Office trivia. Send help.", user_ip=temp_ip, date_posted = datetime(2022, 12, 30, 2, 42, 59), avatar_image = random.choice(avatar_filenames))
+db.session.add(post50)
+
+post51 = Post(content='Useless superpower idea: when you pour soda, it never fizzes over the rim of the glass you’re pouring into (but it still retains optimal carbonation levels)', user_ip=temp_ip, date_posted = datetime(2023, 1, 24, 19, 6, 51), avatar_image = random.choice(avatar_filenames))
+db.session.add(post51)
+
+
 db.session.commit()
 
 
@@ -131,6 +186,38 @@ db.session.commit()
 post1 = Post.query.get(1)
 liker1 = Liker(ip_address='1.1.1.1', post_id=post1.id)
 db.session.add(liker1)
+
+
+from itertools import cycle
+
+# Define IP address generator
+def ip_generator(start, end):
+    for i in range(start, end + 1):
+        yield f'{i}.{i}.{i}.{i}'
+
+# Prepare a list of posts to have likes
+posts_to_have_likes = [1, 2, 5, 7, 10, 13, 15, 18, 21, 23, 26, 29, 31, 34, 37, 39, 42, 45, 47, 50, 51]
+
+# Cycle through the list of likes (0 to 3)
+like_counts = cycle([1, 2, 1, 3, 1, 1, 2, 3, 1, 2, 1, 3, 1, 1, 2])
+
+# Generate IP addresses
+ip_gen = ip_generator(34, 83)
+
+for post_id in posts_to_have_likes:
+    # Get the post
+    post = Post.query.get(post_id)
+
+    # Determine the number of likes for this post
+    like_count = next(like_counts)
+
+    # Add likes
+    for _ in range(like_count):
+        liker = Liker(ip_address=next(ip_gen), post_id=post.id)
+        db.session.add(liker)
+
+
+
 
 db.session.commit()
 

@@ -10,6 +10,7 @@ from flask_limiter.util import get_remote_address
 # so one extension object can be used for multiple apps
 # they are instead
 
+# requires memcached docker container to be running
 #db = SQLAlchemy()
 #mail = Mail()
 #limiter = Limiter(key_func=get_remote_address,

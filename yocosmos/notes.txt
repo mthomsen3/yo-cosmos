@@ -1,11 +1,12 @@
-docker run \
-  --name some-memcached \
-  -p 11211:11211 \
-  -d \
-  launcher.gcr.io/google/memcached1 \
-  '-m 256'
+docker run --name some-memcached -p 11211:11211 -d launcher.gcr.io/google/memcached1 '-m 256'
 
 
+
+TODO:
+
+Add comments functionality
+Update style of 404 500 pages
+Change 'about' opacity... seems low 
 
 
   
